@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Home Help</string>
+
+
+    <string-array name="spinnerItems">
+        <item>Electrical Services</item>
+        <item>Home Maintenance </item>
+        <item>Car Maintenance Services</item>
+    </string-array>
+
+</resources>
