@@ -55,10 +55,10 @@ public class MainActivity extends AppCompatActivity implements ServiceAdapter.Li
 
     public void updateListView(AdapterView<?> parent, View view, int position, long id)
     {
-        Log.i("Update List View", "parent: "+parent.toString());
-        Log.i("Update List View", "view: "+view.toString());
-        Log.i("Update List View", "position: "+position);
-        Log.i("Update List View", " id: "+id);
+//        Log.i("Update List View", "parent: "+parent.toString());
+//        Log.i("Update List View", "view: "+view.toString());
+//        Log.i("Update List View", "position: "+position);
+//        Log.i("Update List View", " id: "+id);
 
         switch (position) {
             case 0:
@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements ServiceAdapter.Li
             case 0:
                 Log.i("electrical", "onListItemClick: "+clickedItemIndex);
                 sv = electricalList.get(clickedItemIndex);
-                sv.toString();
+//                sv.toString();
                 bd.putSerializable("dataToShow", sv);
                 dataToShow = new Intent(getApplicationContext(), Main2Activity.class);
                 dataToShow.putExtra("dataToShow", sv);
@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements ServiceAdapter.Li
             case 1:
                 Log.i("home", "onListItemClick: "+clickedItemIndex);
                 sv = homeList.get(clickedItemIndex);
-                sv.toString();
+//                sv.toString();
                 bd.putSerializable("dataToShow", sv);
                 dataToShow = new Intent(getApplicationContext(), Main2Activity.class);
                 dataToShow.putExtra("dataToShow", sv);
@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity implements ServiceAdapter.Li
             case 2:
                 Log.i("car", "onListItemClick: "+clickedItemIndex);
                 sv = carList.get(clickedItemIndex);
-                sv.toString();
+//                sv.toString();
                 bd.putSerializable("dataToShow", sv);
                 dataToShow = new Intent(getApplicationContext(), Main2Activity.class);
                 dataToShow.putExtra("dataToShow", sv);
