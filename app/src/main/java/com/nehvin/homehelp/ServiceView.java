@@ -9,29 +9,71 @@ import java.io.Serializable;
 
 class ServiceView implements Serializable{
 
-    public String name;
-    public String license_no;
-    public String services_offered;
-    public String rate_per_hr;
-    public String rating;
-    public String user_comments;
-    public String emailid;
-    public String contactno;
-    public String site_add;
+    private String name="";
+    private String license_no="";
+    private String services_offered="";
+    private String rate_per_hr="";
+    private String rating="";
+    private String user_comments="";
+    private String emailid="";
+    private String contactno="";
+    private String site_add="";
 
     private static final String TAG = ServiceView.class.getSimpleName();
 
     public ServiceView(String name, String license_no, String services_offered, String rate_per_hr,
                        String rating, String user_comments, String emailid, String contactno, String site_add) {
-        this.name = name;
-        this.license_no = license_no;
-        this.services_offered = services_offered;
-        this.rate_per_hr = rate_per_hr;
-        this.rating = rating;
-        this.user_comments = user_comments;
-        this.emailid = emailid;
-        this.contactno = contactno;
-        this.site_add = site_add;
+            this.name = name;
+            this.license_no = license_no;
+            this.services_offered = services_offered;
+            this.rate_per_hr = rate_per_hr;
+            this.rating = rating;
+            this.user_comments = user_comments;
+            this.emailid = emailid;
+            this.contactno = contactno;
+            this.site_add = site_add;
+    }
+
+    public String getName() {
+        if(this.name != null)
+            return this.name;
+        else
+            return "";
+    }
+
+    public String getLicense_no() {
+        if(this.license_no != null)
+            return this.license_no;
+        else
+            return "";
+    }
+
+    public String getServices_offered() {
+        return this.services_offered;
+    }
+
+    public String getRate_per_hr() {
+        return this.rate_per_hr;
+    }
+
+    public String getRating() {
+        return this.rating;
+    }
+
+    public String getUser_comments() {
+        return this.user_comments;
+    }
+
+    public String getEmailid() {
+        return this.emailid;
+    }
+
+    public String getContactno() {
+        return this.contactno;
+    }
+
+    public String getSite_add() {
+        return this.site_add;
     }
 
     @Override

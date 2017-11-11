@@ -46,9 +46,9 @@ class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ServiceViewHold
     @Override
     public void onBindViewHolder(ServiceViewHolder holder, int position) {
         Log.d(TAG, "#" + position);
-        holder.title.setText(list.get(position).name);
-        holder.phone_no.setText(list.get(position).contactno);
-        holder.rb.setRating(Float.parseFloat(list.get(position).rating));
+        holder.title.setText(list.get(position).getName());
+        holder.phone_no.setText(list.get(position).getContactno());
+        holder.rb.setRating(Float.parseFloat(list.get(position).getRating()));
     }
 
     @Override
@@ -60,7 +60,6 @@ class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ServiceViewHold
     public int getItemCount() {
         return list.size();
     }
-
 
 
     /**

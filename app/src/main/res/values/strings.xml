@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Home Help</string>
+    <string translatable="true" name="app_name">Home Help</string>
+    <string translatable="true" name="license_no">License No:</string>
 
 
-    <string-array name="spinnerItems">
+    <string-array translatable="true" name="spinnerItems">
         <item>Electrical Services</item>
         <item>Home Maintenance </item>
         <item>Car Maintenance Services</item>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollPane"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+            <RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context="com.nehvin.homehelp.Main2Activity">
+
+            <TextView
+                android:id="@+id/tv_service_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name of the service"
+                android:layout_alignParentTop="true"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:id="@+id/license_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/tv_service_name"
+                android:textSize="25sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:text="@string/license_no"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_license"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_service_name"
+                android:layout_toEndOf="@+id/license_label"
+                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:textSize="25sp"
+                android:hint="License No"
+                android:layout_marginBottom="10dp"
+                />
+
+            <TextView
+                android:id="@+id/tv_emailid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_license"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="20dp"
+                android:textSize="25sp"
+                android:layout_marginBottom="10dp"
+                android:hint="email id" />
+
+            <TextView
+                android:id="@+id/tv_phone_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_emailid"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:textSize="25sp"
+                android:layout_marginBottom="10dp"
+                android:hint="Phone No" />
+
+            <TextView
+                android:id="@+id/tv_site_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_phone_no"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"
+                android:layout_marginBottom="10dp"
+                android:hint="Site Add" />
+
+            <TextView
+                android:id="@+id/tv_rate_per_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_site_add"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"
+                android:layout_marginBottom="10dp"
+                android:hint="Rate Per Hour" />
+
+            <TextView
+                android:id="@+id/tv_service_offered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_rate_per_hour"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:textSize="25sp"
+                android:layout_marginBottom="10dp"
+                android:hint="Services Offered" />
+
+            <RatingBar
+                android:id="@+id/rb_ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_service_offered"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:progressTint="@android:color/holo_orange_dark"
+                tools:text="#12" />
+
+            <TextView
+                android:id="@+id/tv_comments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"
+                android:layout_marginBottom="10dp"
+                android:layout_below="@+id/rb_ratingBar"
+                android:hint="Comments" />
+
+            <Button
+                android:id="@+id/backBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_marginStart="20dp"
+                android:layout_below="@+id/tv_comments"
+                android:text="Back" />
+
+            <Button
+                android:id="@+id/schedule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/backBtn"
+                android:textSize="20sp"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/tv_comments"
+                android:text="Schedule" />
+
+        </RelativeLayout>
+    </ScrollView>
