@@ -3,6 +3,7 @@ package com.nehvin.homehelp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -40,16 +41,12 @@ public class Main2Activity extends AppCompatActivity {
         rate_per_hour.setText(sv.getRate_per_hr());
         site_add.setText("http://"+sv.getSite_add());
         ratingBar.setRating(Float.parseFloat(sv.getRating()));
+        ratingBar.setIsIndicator(true);
 
         StringTokenizer comment = new StringTokenizer(sv.getUser_comments(),",");
         while (comment.hasMoreTokens()) {
-//            Log.i("Comment", "onCreate: "+comment.nextToken()+"\r\n");
             comments.setText(comments.getText()+comment.nextToken()+"\r\n\r\n");
-//            System.out.println(st.nextToken());
         }
-
-
-//        sv.toString();
     }
 
 
@@ -63,5 +60,14 @@ public class Main2Activity extends AppCompatActivity {
         services_offered = (TextView) findViewById(R.id.tv_service_offered);
         ratingBar = (RatingBar) findViewById(R.id.rb_ratingBar);
         comments = (TextView) findViewById(R.id.tv_comments);
+    }
+
+    public void scheduleAppt(View view) {
+        Intent intToSchedule = new Intent(getApplicationContext(), Main3Activity.class );
+        startActivity(intToSchedule);
+    }
+
+    public void goBack(View view) {
+        onBackPressed();
     }
 }

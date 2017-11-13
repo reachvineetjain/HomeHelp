@@ -126,9 +126,9 @@
                 android:id="@+id/backBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="20sp"
                 android:layout_marginStart="20dp"
                 android:layout_below="@+id/tv_comments"
+                android:onClick="goBack"
                 android:text="Back" />
 
             <Button
@@ -136,10 +136,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/backBtn"
-                android:textSize="20sp"
                 android:layout_marginEnd="20dp"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@+id/tv_comments"
+                android:onClick="scheduleAppt"
                 android:text="Schedule" />
 
         </RelativeLayout>

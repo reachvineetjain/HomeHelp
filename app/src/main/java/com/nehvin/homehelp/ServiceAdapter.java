@@ -49,6 +49,7 @@ class ServiceAdapter extends RecyclerView.Adapter<ServiceAdapter.ServiceViewHold
         holder.title.setText(list.get(position).getName());
         holder.phone_no.setText(list.get(position).getContactno());
         holder.rb.setRating(Float.parseFloat(list.get(position).getRating()));
+        holder.rb.setIsIndicator(true);
     }
 
     @Override

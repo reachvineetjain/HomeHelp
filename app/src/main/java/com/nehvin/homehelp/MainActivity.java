@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -87,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements ServiceAdapter.Li
     public void onListItemClick(int clickedItemIndex) {
         //todo
 // view individual service
-        Toast.makeText(MainActivity.this, "To be implemented", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(MainActivity.this, "To be implemented", Toast.LENGTH_SHORT).show();
         ServiceView sv;
         Bundle bd = new Bundle();
         Intent dataToShow;
