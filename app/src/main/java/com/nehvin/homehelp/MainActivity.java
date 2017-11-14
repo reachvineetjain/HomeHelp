@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements ServiceAdapter.Li
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.list_of_services);
 
         listOfServices = (RecyclerView) findViewById(R.id.listOfService);
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements ServiceAdapter.Li
                 sv = electricalList.get(clickedItemIndex);
 //                sv.toString();
                 bd.putSerializable("dataToShow", sv);
-                dataToShow = new Intent(getApplicationContext(), Main2Activity.class);
+                dataToShow = new Intent(getApplicationContext(), ServiceDetails.class);
                 dataToShow.putExtra("dataToShow", sv);
                 startActivity(dataToShow);
                 break;
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements ServiceAdapter.Li
                 sv = homeList.get(clickedItemIndex);
 //                sv.toString();
                 bd.putSerializable("dataToShow", sv);
-                dataToShow = new Intent(getApplicationContext(), Main2Activity.class);
+                dataToShow = new Intent(getApplicationContext(), ServiceDetails.class);
                 dataToShow.putExtra("dataToShow", sv);
                 startActivity(dataToShow);
                 break;
@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements ServiceAdapter.Li
                 sv = carList.get(clickedItemIndex);
 //                sv.toString();
                 bd.putSerializable("dataToShow", sv);
-                dataToShow = new Intent(getApplicationContext(), Main2Activity.class);
+                dataToShow = new Intent(getApplicationContext(), ServiceDetails.class);
                 dataToShow.putExtra("dataToShow", sv);
                 startActivity(dataToShow);
                 break;

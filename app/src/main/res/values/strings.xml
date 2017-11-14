@@ -9,4 +9,13 @@
         <item>Car Maintenance Services</item>
     </string-array>
 
+    <string-array name="listOfBanks" translatable="true">
+        <item>Choose a Bank</item>
+        <item>Bank of America</item>
+        <item>Citi Bank </item>
+        <item>Wells Fargo</item>
+        <item>JP Morgan Chase</item>
+        <item>Bank of New York Mellon</item>
+    </string-array>
+
 </resources>

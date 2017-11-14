@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nehvin.homehelp.Main3Activity">
+    tools:context="com.nehvin.homehelp.ScheduleService">
 
 
     <TextView
@@ -22,9 +22,11 @@
         android:id="@+id/btn_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/tv_date"
         android:layout_marginEnd="60dp"
+        android:src="@drawable/if_calendar"
         android:text="Select Date" />
 
     <TextView
@@ -40,6 +42,7 @@
     <Button
         android:id="@+id/btn_time"
         android:layout_width="wrap_content"
+        android:textAllCaps="false"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/btn_date"
         android:layout_alignTop="@+id/tv_time"
@@ -113,6 +116,7 @@
         android:id="@+id/btn_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/tv_service_area_label"
         android:layout_marginBottom="30dp"
@@ -124,6 +128,7 @@
         android:id="@+id/btn_payment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textAllCaps="false"
         android:layout_alignBaseline="@+id/btn_back"
         android:layout_alignBottom="@+id/btn_back"
         android:layout_alignEnd="@+id/btn_time"

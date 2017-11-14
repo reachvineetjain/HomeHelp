@@ -1,9 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.nehvin.homehelp.PaymentActivity">
 
-</android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/payment_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="10dp"
+        android:text="Total Due: " />
+
+    <TextView
+        android:id="@+id/actual_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignTop="@+id/payment_label"
+        android:layout_toEndOf="@+id/payment_label"
+        android:textStyle="bold"
+        android:text="$100.00" />
+
+    <TextView
+        android:id="@+id/info_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_alignStart="@+id/payment_label"
+        android:layout_below="@+id/actual_payment"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:text="Please use one of the following options to make a payment for your selected service(s)." />
+
+    <RadioGroup
+        android:id="@+id/paymentGrp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/info_label"
+        android:layout_alignStart="@+id/info_label"
+
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/creditCardButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:checked="true"
+            android:text="Credit / Debit Card"
+            android:textSize="20sp"
+            app:buttonTint="@android:color/background_dark" />
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="5dp"
+            android:clickable="false"
+            android:contentDescription="credit card"
+            android:src="@drawable/credit_lg" />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/netBanking"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            app:buttonTint="@android:color/background_dark"
+            android:layout_marginBottom="5dp"
+            android:text="Net Banking " />
+
+        <Spinner
+            android:id="@+id/netBanking_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginBottom="8dp"
+            android:entries="@array/listOfBanks"
+            />
+
+        <android.support.v7.widget.AppCompatRadioButton
+            android:id="@+id/paypal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            app:buttonTint="@android:color/background_dark"
+            android:layout_marginBottom="5dp"
+            android:text="Pay Pal" />
+
+        <ImageView
+            android:id="@+id/paypal_image"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="paypal"
+            android:src="@drawable/paypalimage" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnGoBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/paymentGrp"
+        android:layout_below="@+id/paymentGrp"
+        android:layout_marginTop="34dp"
+        android:textAllCaps="false"
+        android:onClick="goPrevPage"
+        android:text="Back" />
+
+    <Button
+        android:id="@+id/makePayment"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnGoBack"
+        android:layout_alignBottom="@+id/btnGoBack"
+        android:onClick="makePayment"
+        android:layout_alignEnd="@+id/info_label"
+        android:text="Make Payment" />
+
+</RelativeLayout>

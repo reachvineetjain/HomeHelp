@@ -1,11 +1,11 @@
 package com.nehvin.homehelp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.fourmob.datetimepicker.date.DatePickerDialog;
 import com.fourmob.datetimepicker.date.DatePickerDialog.OnDateSetListener;
@@ -17,7 +17,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public class Main3Activity extends FragmentActivity implements OnDateSetListener, TimePickerDialog.OnTimeSetListener {
+public class ScheduleService extends FragmentActivity implements OnDateSetListener, TimePickerDialog.OnTimeSetListener {
 
 
     public static final String DATEPICKER_TAG = "datepicker";
@@ -30,7 +30,7 @@ public class Main3Activity extends FragmentActivity implements OnDateSetListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.schedule_service);
 
         dateTextView = (TextView)findViewById(R.id.tv_date);
         dateTextView.setText(sdf.format(new Date()));
@@ -62,7 +62,7 @@ public class Main3Activity extends FragmentActivity implements OnDateSetListener
             public void onClick(View v) {
                 timePickerDialog.setVibrate(false);
                 timePickerDialog.setStartTime(calendar.get(Calendar.HOUR_OF_DAY),calendar.get(Calendar.MINUTE));
-                timePickerDialog.setCloseOnSingleTapMinute(true);
+                timePickerDialog.setCloseOnSingleTapMinute(false);
                 timePickerDialog.show(getSupportFragmentManager(), TIMEPICKER_TAG);
             }
         });
@@ -82,7 +82,7 @@ public class Main3Activity extends FragmentActivity implements OnDateSetListener
 
     @Override
     public void onDateSet(DatePickerDialog datePickerDialog, int year, int month, int day) {
-//        Toast.makeText(Main3Activity.this, "new date:" + year + "-" + month + "-" + day, Toast.LENGTH_LONG).show();
+//        Toast.makeText(ScheduleService.this, "new date:" + year + "-" + month + "-" + day, Toast.LENGTH_LONG).show();
         Calendar calendar = Calendar.getInstance();
         calendar.set(year,month,day);
         dateTextView.setText(sdf.format(new Date(calendar.getTimeInMillis())));
@@ -91,12 +91,14 @@ public class Main3Activity extends FragmentActivity implements OnDateSetListener
 
     @Override
     public void onTimeSet(RadialPickerLayout view, int hourOfDay, int minute) {
-//        Toast.makeText(Main3Activity.this, "new time:" + hourOfDay + "-" + minute, Toast.LENGTH_LONG).show();
+//        Toast.makeText(ScheduleService.this, "new time:" + hourOfDay + "-" + minute, Toast.LENGTH_LONG).show();
         timeTextView.setText(hourOfDay+" : "+minute);
     }
 
     public void payment_page(View view) {
-        Toast.makeText(this, "go to payment page", Toast.LENGTH_SHORT).show();
+//        Toast.makeText(this, "go to payment page", Toast.LENGTH_SHORT).show();
+        Intent payment_intent = new Intent(this, PaymentActivity.class);
+        startActivity(payment_intent);
     }
 
     public void goBack(View view) {

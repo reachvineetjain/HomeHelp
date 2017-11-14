@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.StringTokenizer;
 
-public class Main2Activity extends AppCompatActivity {
+public class ServiceDetails extends AppCompatActivity {
 
     ServiceView sv;
     private TextView service_name;
@@ -26,7 +26,7 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.service_details);
 
         initializeVariables();
 
@@ -63,7 +63,7 @@ public class Main2Activity extends AppCompatActivity {
     }
 
     public void scheduleAppt(View view) {
-        Intent intToSchedule = new Intent(getApplicationContext(), Main3Activity.class );
+        Intent intToSchedule = new Intent(getApplicationContext(), ScheduleService.class );
         startActivity(intToSchedule);
     }
 
