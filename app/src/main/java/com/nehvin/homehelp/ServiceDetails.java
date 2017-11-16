@@ -45,7 +45,7 @@ public class ServiceDetails extends AppCompatActivity {
 
         StringTokenizer comment = new StringTokenizer(sv.getUser_comments(),",");
         while (comment.hasMoreTokens()) {
-            comments.setText(comments.getText()+comment.nextToken()+"\r\n\r\n");
+            comments.setText(comments.getText()+comment.nextToken()+"\r\n");
         }
     }
 

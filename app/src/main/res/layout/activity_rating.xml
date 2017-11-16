@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nehvin.homehelp.RatingActivity">
+
+    <TextView
+        android:id="@+id/label1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Thank you for using the Home Help Services. Please do visit us again for any help required."
+        />
+
+    <TextView
+        android:id="@+id/label2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:layout_below="@+id/label1"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Request you rate our services and also provide a feedback so that we can improve on our services"
+        />
+
+    <RatingBar
+        android:id="@+id/ratingService"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/label2"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_centerHorizontal="true"
+        android:progressTint="@android:color/holo_orange_dark"
+        />
+
+    <EditText
+        android:id="@+id/tv_serviceRatingComments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingService"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Please provide your feedback "
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/background_dark"
+        android:textColorLink="@android:color/background_dark" />
+
+    <Button
+        android:id="@+id/finalySubmit"
+        android:layout_below="@+id/tv_serviceRatingComments"
+        android:text="Submit"
+        android:textAllCaps="false"
+        android:onClick="thankYouPage"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>

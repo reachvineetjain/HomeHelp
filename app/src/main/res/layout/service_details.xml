@@ -97,7 +97,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_rate_per_hour"
                 android:layout_centerHorizontal="true"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:textSize="25sp"
                 android:layout_marginBottom="10dp"
                 android:hint="Services Offered" />
@@ -118,6 +119,8 @@
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:textSize="25sp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
                 android:layout_marginBottom="10dp"
                 android:layout_below="@+id/rb_ratingBar"
                 android:hint="Comments" />
@@ -127,7 +130,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAllCaps="false"
-                android:layout_marginStart="20dp"
+                android:layout_marginStart="30dp"
                 android:layout_below="@+id/tv_comments"
                 android:onClick="goBack"
                 android:text="Back" />
@@ -138,7 +141,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@+id/backBtn"
                 android:textAllCaps="false"
-                android:layout_marginEnd="20dp"
+                android:layout_marginEnd="30dp"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@+id/tv_comments"
                 android:onClick="scheduleAppt"
